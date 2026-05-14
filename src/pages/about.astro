@@ -1,4 +1,6 @@
 ---
+import Navigation from '../components/navigation.astro'
+import '../styles/global.css';
 const pageTitle = "About Me";
 
 const identity = {
@@ -13,6 +15,8 @@ const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 const happy = false;
 const finished = true;
 const goal = 3;
+
+const skillColor = "red";
 ---
 
 <html lang="en">
@@ -23,12 +27,20 @@ const goal = 3;
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
         <title>{pageTitle}</title>
+
+        <style>
+            h1 {
+                border: solid 1px #3a0404;
+                color: purple;
+                font-size: 4rem;
+            }
+            .teste{
+                color: var(--skillColor);
+            }
+        </style>
     </head>
     <body>
-        <a href="/">Home</a>
-        <a href="/">About</a>
-        <a href="/modulos">Módulos</a>
-        <h1>{pageTitle}</h1>
+        <Navigation/>
         <p>Here are a few facts about me:</p>
         <ul>
             <li>My name is {identity.firstName}.</li>
@@ -57,7 +69,7 @@ const goal = 3;
 
         {
             goal === 3 ? (
-                <p>My goal is to finish in 3 days.</p>
+                <p class="teste">My goal is to finish in 3 days.</p>
             ) : (
                 <p>My goal is not 3 days.</p>
             )

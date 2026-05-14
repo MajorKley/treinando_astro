@@ -1,4 +1,7 @@
 ---
+import '../styles/global.css';
+import Navigation from '../components/navigation.astro';
+import Footer from '../components/footer.astro';
 const title = "AstroHome";
 ---
 
@@ -12,9 +15,8 @@ const title = "AstroHome";
 		<title>{title}</title>
 	</head>
 	<body>
-		<a href="/">Home</a>
-        <a href="/about">About</a>
-        <a href="/modulos">Módulos</a>
+		<Navigation/>
 		<h1> {title}</h1>
+		<Footer/>
 	</body>
 </html>
