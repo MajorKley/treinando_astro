@@ -1,6 +1,7 @@
 ---
-import Navigation from '../components/navigation.astro'
 import '../styles/global.css';
+import Footer from '../components/footer.astro'
+import Header from '../components/header.astro';
 const pageTitle = "About Me";
 
 const identity = {
@@ -40,7 +41,7 @@ const skillColor = "red";
         </style>
     </head>
     <body>
-        <Navigation/>
+        <Header/>
         <p>Here are a few facts about me:</p>
         <ul>
             <li>My name is {identity.firstName}.</li>
@@ -74,5 +75,7 @@ const skillColor = "red";
                 <p>My goal is not 3 days.</p>
             )
         }
+
+        <Footer/>
     </body>
 </html>
